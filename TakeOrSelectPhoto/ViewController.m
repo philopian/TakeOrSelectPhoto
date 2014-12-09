@@ -16,21 +16,31 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    self.takePhoto.layer.cornerRadius = 6;
-    self.takePhoto.clipsToBounds = YES;
-    self.takePhoto.backgroundColor = RGB(39, 41, 42);
-    self.takePhoto.layer.borderColor = self.takePhoto.tintColor.CGColor;
-    
+    // style the buttons
+    [self styleUIButton:self.takePhoto];
+    [self styleUIButton:self.selectPhoto];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+#pragma marks - Button Styles
+- (void)styleUIButton:(UIButton*)button{
+    button.layer.cornerRadius = 6;
+    button.clipsToBounds = YES;
+    button.backgroundColor = RGB(39, 41, 42);
+    button.layer.borderColor = self.takePhoto.tintColor.CGColor;
+}
+
+
 
 
 #pragma marks - Take or Select Photo
@@ -65,6 +75,8 @@
     
     [self presentViewController:picker animated:YES completion:NULL];
 }
+
+
 
 
 
