@@ -33,7 +33,7 @@
 }
 
 
-
+#pragma marks - Take or Select Photo
 - (IBAction)takePhoto:(id)sender
 {
     // check to see for device's that don't have a camera (app will crash without this logic)
@@ -56,7 +56,15 @@
     }
 }
 
-
+- (IBAction)selectPhoto:(id)sender
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
 
 
 
@@ -80,6 +88,5 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 }
 
 
-- (IBAction)selectPhoto:(id)sender {
-}
+
 @end
