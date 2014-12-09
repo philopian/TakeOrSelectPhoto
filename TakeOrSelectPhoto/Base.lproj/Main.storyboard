@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i65-qj-B6I">
+                                <rect key="frame" x="16" y="537" width="131" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="GCW-aq-u9A"/>
+                                    <constraint firstAttribute="width" constant="131" id="TTk-EO-4YZ"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELC-2o-c4J"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QE7-xv-CSD">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                                <color key="backgroundColor" red="0.30491966855800257" green="0.43384381391109506" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i65-qj-B6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DJL-py-3kc"/>
+                            <constraint firstItem="QE7-xv-CSD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N7w-5g-2kz"/>
+                            <constraint firstAttribute="bottom" secondItem="i65-qj-B6I" secondAttribute="bottom" constant="20" symbolic="YES" id="ONi-mS-PW1"/>
+                            <constraint firstAttribute="trailing" secondItem="QE7-xv-CSD" secondAttribute="trailing" id="UsA-xt-6qb"/>
+                            <constraint firstItem="QE7-xv-CSD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dLg-oL-rUN"/>
+                            <constraint firstItem="i65-qj-B6I" firstAttribute="top" secondItem="QE7-xv-CSD" secondAttribute="bottom" constant="17" id="tK0-79-Ddx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewSelect" destination="QE7-xv-CSD" id="4Fm-eZ-d8q"/>
+                        <outlet property="takePhoto" destination="i65-qj-B6I" id="bmv-AZ-xC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
