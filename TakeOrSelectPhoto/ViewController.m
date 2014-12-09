@@ -30,12 +30,36 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (IBAction)takePhoto:(id)sender
 {
-    
+
+  
 }
 
 
+
+
+
+#pragma marks - Implementing the Delegate Methods of UIImagePickerController
+
+// user chooses an image or takes a photo
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageViewSelect.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+// User click's the "cancel" button
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 @end
