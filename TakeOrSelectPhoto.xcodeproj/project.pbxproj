@@ -14,6 +14,7 @@
 		37413DD71A367D8F009C1103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37413DD61A367D8F009C1103 /* Images.xcassets */; };
 		37413DDA1A367D8F009C1103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37413DD81A367D8F009C1103 /* LaunchScreen.xib */; };
 		37413DE61A367D8F009C1103 /* TakeOrSelectPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37413DE51A367D8F009C1103 /* TakeOrSelectPhotoTests.m */; };
+		37413DF01A367F4D009C1103 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37413DEF1A367F4D009C1103 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		37413DDF1A367D8F009C1103 /* TakeOrSelectPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeOrSelectPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37413DE41A367D8F009C1103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37413DE51A367D8F009C1103 /* TakeOrSelectPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeOrSelectPhotoTests.m; sourceTree = "<group>"; };
+		37413DEF1A367F4D009C1103 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37413DF01A367F4D009C1103 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		37413DBD1A367D8F009C1103 = {
 			isa = PBXGroup;
 			children = (
+				37413DF11A36825D009C1103 /* frameworks */,
 				37413DC81A367D8F009C1103 /* TakeOrSelectPhoto */,
 				37413DE21A367D8F009C1103 /* TakeOrSelectPhotoTests */,
 				37413DC71A367D8F009C1103 /* Products */,
@@ -117,6 +121,14 @@
 				37413DE41A367D8F009C1103 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37413DF11A36825D009C1103 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37413DEF1A367F4D009C1103 /* QuartzCore.framework */,
+			);
+			name = frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
