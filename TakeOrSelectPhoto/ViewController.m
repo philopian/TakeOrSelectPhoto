@@ -8,6 +8,8 @@
 - (IBAction)takePhoto:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *takePhoto;
 
+- (IBAction)selectPhoto:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *selectPhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewSelect;
 
 @end
@@ -78,4 +80,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 }
 
 
+- (IBAction)selectPhoto:(id)sender {
+}
 @end
